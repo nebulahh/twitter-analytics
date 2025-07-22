@@ -1,4 +1,4 @@
-import { MetricData, ChartDataPoint, Widget } from '../types/dashboard';
+import { MetricData, ChartDataPoint } from '../types/dashboard';
 import { FilterState } from '../components/DashboardFilters';
 
 export const generateMetrics = (): MetricData[] => [
