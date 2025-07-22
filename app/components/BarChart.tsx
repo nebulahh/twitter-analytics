@@ -25,6 +25,8 @@ export default function BarChart({ data, title, color = '#10B981' }: BarChartPro
   };
 
   return (
+ <>
+      {title && <h3 className="mb-2 text-lg font-semibold">{title}</h3>}
     <div className="w-full h-full">
       <ResponsiveContainer width="100%" height="100%">
         <RechartsBarChart data={data} margin={{ top: 5, right: 30, left: 20, bottom: 5 }}>
@@ -47,5 +49,6 @@ export default function BarChart({ data, title, color = '#10B981' }: BarChartPro
         </RechartsBarChart>
       </ResponsiveContainer>
     </div>
+ </>
   );
 }
