@@ -1,6 +1,6 @@
 'use client';
 
-import { BarChart as RechartsBarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from 'recharts';
+import { BarChart as RechartsBarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer,TooltipContentProps } from 'recharts';
 import { ChartDataPoint } from '../types/dashboard';
 
 interface BarChartProps {
@@ -9,14 +9,9 @@ interface BarChartProps {
   color?: string;
 }
 
-interface CustomTooltipProps {
-  active?: boolean;
-  payload?: Array<{ value: number; name?: string }>;
-  label?: string;
-}
-
 export default function BarChart({ data, title, color = '#10B981' }: BarChartProps) {
-  const CustomTooltip = ({ active, payload, label }: CustomTooltipProps) => {
+  const CustomTooltip = (props: TooltipContentProps<number, string>) => {
+    const { active, payload, label } = props;
     if (active && payload && payload.length) {
       return (
         <div className="bg-white p-3 border border-gray-200 rounded-lg shadow-lg">
