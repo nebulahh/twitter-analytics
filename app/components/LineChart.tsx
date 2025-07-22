@@ -9,7 +9,7 @@ interface LineChartProps {
   color?: string;
 }
 
-export default function LineChart({ data, title color = '#3B82F6' }: LineChartProps) {
+export default function LineChart({ data, title, color = '#3B82F6' }: LineChartProps) {
   const CustomTooltip = (props: TooltipContentProps<number, string>) => {
      const { active, payload, label } = props;
     if (active && payload && payload.length) {
