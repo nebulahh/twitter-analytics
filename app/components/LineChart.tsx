@@ -1,6 +1,6 @@
 'use client';
 
-import { LineChart as RechartsLineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from 'recharts';
+import { LineChart as RechartsLineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, TooltipProps } from 'recharts';
 import { ChartDataPoint } from '../types/dashboard';
 
 interface LineChartProps {
@@ -9,14 +9,8 @@ interface LineChartProps {
   color?: string;
 }
 
-
-interface CustomTooltipProps {
-  active: boolean;
-  payload: any; 
-}
-
 export default function LineChart({ data, color = '#3B82F6' }: LineChartProps) {
-  const CustomTooltip = ({ active, payload, label }: CustomTooltipProps) => {
+  const CustomTooltip = ({ active, payload, label }: TooltipProps<number, string>) => {
     if (active && payload && payload.length) {
       return (
         <div className="bg-white p-3 border border-gray-200 rounded-lg shadow-lg">
