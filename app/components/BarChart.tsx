@@ -12,7 +12,6 @@ interface BarChartProps {
 interface CustomTooltipProps {
   active: boolean;
   payload: any; 
-  label: any;
 }
 
 export default function BarChart({ data, title, color = '#10B981' }: BarChartProps) {

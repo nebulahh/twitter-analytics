@@ -13,7 +13,6 @@ interface LineChartProps {
 interface CustomTooltipProps {
   active: boolean;
   payload: any; 
-  label: any;
 }
 
 export default function LineChart({ data, color = '#3B82F6' }: LineChartProps) {
