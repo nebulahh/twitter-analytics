@@ -10,7 +10,7 @@ interface LineChartProps {
 }
 
 export default function LineChart({ data, color = '#3B82F6' }: LineChartProps) {
-  const CustomTooltip = ({ active, payload, label }: {any, any, any}) => {
+  const CustomTooltip = ({ active, payload, label }: unkwown) => {
     if (active && payload && payload.length) {
       return (
         <div className="bg-white p-3 border border-gray-200 rounded-lg shadow-lg">
