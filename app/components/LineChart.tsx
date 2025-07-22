@@ -25,6 +25,7 @@ export default function LineChart({ data, color = '#3B82F6' }: LineChartProps) {
   };
 
   return (
+    {title && <h3 className="mb-2 text-lg font-semibold">{title}</h3>}
     <div className="w-full h-full">
       <ResponsiveContainer width="100%" height="100%">
         <RechartsLineChart data={data} margin={{ top: 5, right: 30, left: 20, bottom: 5 }}>
