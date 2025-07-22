@@ -10,7 +10,7 @@ interface BarChartProps {
 }
 
 export default function BarChart({ data, title, color = '#10B981' }: BarChartProps) {
-  const CustomTooltip = ({ active, payload, label }: any) => {
+  const CustomTooltip = ({ active, payload, label }: {any, any, any}) => {
     if (active && payload && payload.length) {
       return (
         <div className="bg-white p-3 border border-gray-200 rounded-lg shadow-lg">
