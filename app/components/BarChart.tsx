@@ -44,7 +44,7 @@ export default function BarChart({ data, title, color = '#10B981' }: BarChartPro
             tick={{ fontSize: 12, fill: '#6b7280' }}
             axisLine={{ stroke: '#e5e7eb' }}
           />
-          <Tooltip content={<CustomTooltip} />
+          <Tooltip content={CustomTooltip} />
           <Bar 
             dataKey="value" 
             fill={color}

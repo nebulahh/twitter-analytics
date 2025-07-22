@@ -45,7 +45,7 @@ export default function LineChart({ data, color = '#3B82F6' }: LineChartProps) {
             tick={{ fontSize: 12, fill: '#6b7280' }}
             axisLine={{ stroke: '#e5e7eb' }}
           />
-          <Tooltip content={<CustomTooltip} />
+          <Tooltip content={CustomTooltip} />
           <Line 
             type="monotone" 
             dataKey="value" 
