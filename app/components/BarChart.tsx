@@ -9,8 +9,14 @@ interface BarChartProps {
   color?: string;
 }
 
+interface CustomTooltipProps {
+  active: boolean;
+  payload: any; 
+  label: any;
+}
+
 export default function BarChart({ data, title, color = '#10B981' }: BarChartProps) {
-  const CustomTooltip = ({ active, payload, label }: unknown) => {
+  const CustomTooltip = ({ active, payload, label }: CustomTooltipProps) => {
     if (active && payload && payload.length) {
       return (
         <div className="bg-white p-3 border border-gray-200 rounded-lg shadow-lg">
