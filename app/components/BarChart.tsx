@@ -16,7 +16,7 @@ interface CustomTooltipProps {
 }
 
 export default function BarChart({ data, title, color = '#10B981' }: BarChartProps) {
-  const CustomTooltip = ({ active, payload, label }: CustomTooltipProps) => {
+  const CustomTooltip = ({ active, payload, label }: CustomTooltipProps[]) => {
     if (active && payload && payload.length) {
       return (
         <div className="bg-white p-3 border border-gray-200 rounded-lg shadow-lg">
@@ -44,7 +44,7 @@ export default function BarChart({ data, title, color = '#10B981' }: BarChartPro
             tick={{ fontSize: 12, fill: '#6b7280' }}
             axisLine={{ stroke: '#e5e7eb' }}
           />
-          <Tooltip content={<CustomTooltip />} />
+          <Tooltip content={<CustomTooltip} />
           <Bar 
             dataKey="value" 
             fill={color}
